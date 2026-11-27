@@ -5,26 +5,58 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Penyusun katalog | Bioinformatika IPB</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#fafbf7;color:#193735;font:16px/1.5 "Segoe UI",Arial,sans-serif}
-.wrap{width:min(92%,800px);margin-inline:auto}
-header{background:#103e40;color:#fffef6;padding:24px 0}
-header p{margin:0;color:#dcece6}
-h1{margin:12px 0 0;font-size:clamp(2rem,5vw,3rem);line-height:1.15}
-ul{list-style:none;padding:0;margin:24px 0}
-li{border-bottom:1px solid #cbdad2;padding:14px 0;font-size:1.12rem;font-weight:600}
-nav{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:24px}
-a{color:#145b53;text-underline-offset:3px}
+* { box-sizing:border-box }
+body { margin:0; background:#f7f8f3; color:#193735; font:16px/1.5 "Segoe UI",Arial,sans-serif }
+.wrap { width:min(92%,1080px); margin-inline:auto }
+header { background:#103e40; color:#fffef6 }
+.mast { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-block:22px }
+.mast strong { font-size:1.02rem }
+.mast p { margin:3px 0 0; color:#dae9e3; font-size:.92rem }
+.logos { display:flex; align-items:center; gap:14px; padding:6px 12px; background:white; border-radius:5px }
+.logos img { display:block; height:32px; width:auto }
+.logos img:last-child { height:44px }
+main { margin-block:clamp(28px,5vw,72px) }
+.credits { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:clamp(20px,5vw,64px); padding:clamp(22px,4vw,54px); background:#fff; border:1px solid #d0ddd4; border-top:4px solid #25645b; border-radius:6px }
+h1 { margin:0; line-height:1.05; font-size:clamp(2.2rem,4.3vw,3.8rem); letter-spacing:-.045em; color:#143e3e; font-weight:650 }
+ul { list-style:none; padding:0; margin:0 }
+li { padding-block:16px; border-top:1px solid #d7e1db }
+li:first-child { border-top:0; padding-top:0 }
+li:last-child { padding-bottom:0 }
+.name { display:block; font-size:clamp(1.18rem,2vw,1.55rem); font-weight:600; line-height:1.35; letter-spacing:-.018em }
+.degree { display:block; margin-top:2px; font-size:.95rem; color:#536960 }
+nav { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px }
+nav a { display:inline-flex; align-items:center; gap:12px; padding:9px 14px; border:1px solid #b9cec2; border-radius:5px; background:white; color:#155c51; text-decoration:none; font-size:.92rem; font-weight:600 }
+nav a:hover { background:#e7f2eb; text-decoration:underline }
+nav a:focus-visible { outline:3px solid #286975; outline-offset:3px }
+@media(max-width:680px) {
+  .mast { align-items:flex-start; flex-direction:column; gap:12px }
+  .credits { grid-template-columns:1fr }
+  h1 { padding-bottom:18px; border-bottom:1px solid #cbdad1 }
+}
 </style>
 </head>
 <body>
-<header><div class="wrap"><p>Asesmen Lapangan LAM INFOKOM 2026</p><p>S1 Bioinformatika, FMIPA IPB University</p><h1>Penyusun katalog</h1></div></header>
+<header><div class="mast wrap">
+  <div><strong>Asesmen Lapangan LAM INFOKOM 2026</strong><p>S1 Bioinformatika, FMIPA IPB University</p></div>
+  <div class="logos">
+    <img src="https://www.ipb.ac.id/wp-content/uploads/2025/08/Logo-IPB-New.png" alt="IPB University" width="500" height="130" referrerpolicy="no-referrer">
+    <img src="https://www.laminfokom.or.id/official/img/logo%20LAM2.png" alt="LAM INFOKOM" width="841" height="1016" referrerpolicy="no-referrer">
+  </div>
+</div></header>
 <main class="wrap">
-<ul>
-<li>Prof. Dr.Eng. Wisnu Ananta Kusuma, S.T., M.T.</li>
-<li>Dr. Luthfan Irfana, S.Si., M.Si.</li>
-<li>Said Thaufik Rizaldi, S.Kom., M.Kom.</li>
-<li>Baheta, S.Si.</li>
-</ul>
-<nav aria-label="Navigasi katalog"><a href="./index.html">LED</a><a href="./lkps.html">LKPS</a></nav>
-</main></body></html>
+  <section class="credits" aria-labelledby="title">
+    <h1 id="title">Penyusun katalog</h1>
+    <ul>
+      <li><span class="name">Prof. Dr.Eng. Wisnu Ananta Kusuma</span> <span class="degree">S.T., M.T.</span></li>
+      <li><span class="name">Dr. Luthfan Irfana</span> <span class="degree">S.Si., M.Si.</span></li>
+      <li><span class="name">Said Thaufik Rizaldi</span> <span class="degree">S.Kom., M.Kom.</span></li>
+      <li><span class="name">Baheta</span> <span class="degree">S.Si.</span></li>
+    </ul>
+  </section>
+  <nav aria-label="Navigasi katalog">
+    <a href="./index.html">Laporan Evaluasi Diri (LED) <span aria-hidden="true">→</span></a>
+    <a href="./lkps.html">Laporan Kinerja Program Studi (LKPS) <span aria-hidden="true">→</span></a>
+  </nav>
+</main>
+</body>
+</html>
